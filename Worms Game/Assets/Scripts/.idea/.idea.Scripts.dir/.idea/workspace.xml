@@ -20,8 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bfa5831-172e-4d9b-acf5-a02160b449c4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Dirt.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Dirt.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Grass.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Grass.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Stone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Stone.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platform_Generation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Platform_Generation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procedural_Generation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Procedural_Generation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,10 +47,11 @@
       <list>
         <option value="$PROJECT_DIR$/Destroy_onclick.cs" />
         <option value="$PROJECT_DIR$/Move_Camera.cs" />
-        <option value="$PROJECT_DIR$/Procedural_Generation.cs" />
         <option value="$PROJECT_DIR$/Mouse_Zoom.cs" />
         <option value="$PROJECT_DIR$/Platform_Generation.cs" />
         <option value="$PROJECT_DIR$/Platform_Generation_v2.cs" />
+        <option value="$PROJECT_DIR$/Procedural_Generation.cs" />
+        <option value="$PROJECT_DIR$/Zoom_Camera.cs" />
       </list>
     </option>
   </component>
@@ -74,6 +79,7 @@
       <workItem from="1605090143193" duration="10789000" />
       <workItem from="1605123746420" duration="6000" />
       <workItem from="1605184974814" duration="5272000" />
+      <workItem from="1605198803509" duration="838000" />
     </task>
     <servers />
   </component>

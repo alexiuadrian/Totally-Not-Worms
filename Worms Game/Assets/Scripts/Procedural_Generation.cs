@@ -14,20 +14,23 @@ public class Procedural_Generation : MonoBehaviour
 
     void Generation()
     {
-        for (int x = -20; x < width + 20; ++x)
+        for (int x = -40; x < width + 40; ++x)
         {
-            for (int y = -10; y < 3; y++)
+            for (int y = -30; y < 3; y++)
             {
-                spawnObj(water, x, y);
+                spawnObj(water, x, y, 1);
             }
         }
         
-        for (int x = 0; x < width; x++)//This will help spawn a tile on the x axis
+        for (int x = 0; x < width; x++)     // This will help spawn a tile on the x axis
         {
             // now for procedural generation we need to gradually increase and decrease the height value
             int minHeight = height - 1;
             int maxHeight = height + 2;
-            height = UnityEngine.Random.Range(minHeight, maxHeight);
+            do
+            {
+                height = UnityEngine.Random.Range(minHeight, maxHeight);
+            } while (height < 1);
             int minStoneSpawnDistance = height - minStoneheight;
             int maxStoneSpawnDistance = height - maxStoneHeight;
             int totalStoneSpawnDistance = UnityEngine.Random.Range(minStoneSpawnDistance, maxStoneSpawnDistance);
@@ -56,9 +59,9 @@ public class Procedural_Generation : MonoBehaviour
         }
     }
     
-    void spawnObj(GameObject obj,int width,int height)    // Whatever we spawn will be a child of our procedural generation gameObj
+    void spawnObj(GameObject obj,int width,int height, int depth = 0)    // Whatever we spawn will be a child of our procedural generation gameObj
     {
-        obj = Instantiate(obj, new Vector2(width, height), Quaternion.identity);
+        obj = Instantiate(obj, new Vector3(width, height, depth), Quaternion.identity);
         obj.transform.parent = this.transform;
     }
 
