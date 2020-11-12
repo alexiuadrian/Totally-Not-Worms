@@ -121,6 +121,57 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &86981140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 86981141}
+  - component: {fileID: 86981142}
+  m_Layer: 0
+  m_Name: Platform Generation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &86981141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86981140}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 32.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &86981142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86981140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f66e90eb9b048d4fb822042c1322e4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 20
+  height: 4
+  minStoneheight: 4
+  maxStoneHeight: 0
+  dirt: {fileID: 1456781419234200314, guid: f051715d228a69945b1d91c6e77608cc, type: 3}
+  grass: {fileID: 1936821329399968537, guid: 78743ae4bd8d19f4ca66dc8138ac3a07, type: 3}
+  stone: {fileID: 8188019138755972402, guid: 08a2e9823ab3c5549b213e5a6dad6126, type: 3}
+  minHeight: 35
 --- !u!1 &338789937
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 338789937}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50, y: 50, z: 1}
+  m_LocalPosition: {x: 50, y: 80, z: 1}
   m_LocalScale: {x: 100, y: 5, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
@@ -461,10 +512,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47daa3ea160fc024db00bc167650410b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraDistanceMax: 20
-  cameraDistanceMin: 5
-  cameraDistance: 10
-  scrollSpeed: 0.5
 --- !u!1 &1075814468
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,7 +522,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1075814470}
   - component: {fileID: 1075814469}
-  - component: {fileID: 1075814471}
   m_Layer: 0
   m_Name: Procedural Generation
   m_TagString: Untagged
@@ -517,27 +563,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1075814471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1075814468}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6745376c1549e74ebbebaee82095f06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  width: 100
-  height: 20
-  minHeight: -20
-  maxHeight: 0
-  repeatNum: 20
-  spikeSpawnHeight: 25
-  dirt: {fileID: 1456781419234200314, guid: f051715d228a69945b1d91c6e77608cc, type: 3}
-  grass: {fileID: 1936821329399968537, guid: 78743ae4bd8d19f4ca66dc8138ac3a07, type: 3}
-  spike: {fileID: 8188019138755972402, guid: 08a2e9823ab3c5549b213e5a6dad6126, type: 3}
 --- !u!1 &1370824249
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,7 +650,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1370824249}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 105, y: 20, z: -1}
+  m_LocalPosition: {x: 110, y: 20, z: -1}
   m_LocalScale: {x: 1, y: 60, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
@@ -718,7 +743,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078297871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 20, z: -1}
+  m_LocalPosition: {x: -10, y: 20, z: -1}
   m_LocalScale: {x: 1, y: 60, z: 20}
   m_Children: []
   m_Father: {fileID: 0}

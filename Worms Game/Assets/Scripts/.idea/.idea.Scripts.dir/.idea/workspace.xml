@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bfa5831-172e-4d9b-acf5-a02160b449c4" name="Default Changelist" comment="" />
+    <list default="true" id="0bfa5831-172e-4d9b-acf5-a02160b449c4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform_Generation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Platform_Generation.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,15 +36,17 @@
     <setting file="file://$PROJECT_DIR$/Move_Camera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Procedural_Generation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Platform_Generation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Platform_Generation_v2.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Destroy_onclick.cs" />
-        <option value="$PROJECT_DIR$/Platform_Generation.cs" />
         <option value="$PROJECT_DIR$/Move_Camera.cs" />
         <option value="$PROJECT_DIR$/Procedural_Generation.cs" />
         <option value="$PROJECT_DIR$/Mouse_Zoom.cs" />
+        <option value="$PROJECT_DIR$/Platform_Generation.cs" />
+        <option value="$PROJECT_DIR$/Platform_Generation_v2.cs" />
       </list>
     </option>
   </component>
@@ -67,6 +72,8 @@
       <workItem from="1605090061696" duration="31000" />
       <workItem from="1605090121882" duration="1000" />
       <workItem from="1605090143193" duration="10789000" />
+      <workItem from="1605123746420" duration="6000" />
+      <workItem from="1605184974814" duration="5272000" />
     </task>
     <servers />
   </component>
@@ -85,6 +92,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

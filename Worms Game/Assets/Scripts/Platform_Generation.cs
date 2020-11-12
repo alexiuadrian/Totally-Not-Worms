@@ -7,8 +7,7 @@ public class Platform_Generation : MonoBehaviour
     [SerializeField] public int width, height;
     [SerializeField] public int minHeight, maxHeight;
     [SerializeField] public int repeatNum;//5
-    [SerializeField] public int spikeSpawnHeight;
-    [SerializeField] public GameObject dirt, grass,spike;
+    [SerializeField] public GameObject dirt, grass;
     void Start()
     {
         Generation();
@@ -19,7 +18,7 @@ public class Platform_Generation : MonoBehaviour
         int repeatValue = 1;
         for (int x = 0; x < width; x++)//This will help spawn a tile on the x axis
         {
-            if(repeatValue == 1)
+            if(repeatValue ==  1)
             {
                 height = Random.Range(minHeight, maxHeight);
                 GenerateFlatPlatform(x);
@@ -41,23 +40,11 @@ public class Platform_Generation : MonoBehaviour
         for (int y = 0; y < height; y++)//This will help spawn a tile on the y axis
         {
 
-
-
             spawnObj(dirt, x, y);
 
+        }
 
-        }
-        if (height < spikeSpawnHeight)
-        {
-            spawnObj(grass, x, height);
-            spawnObj(spike, x, height + 1);
-        }
-        else
-        {
-            spawnObj(grass, x, height);
-        }
-        
-       
+        spawnObj(grass, x, height);
         
     }
 
