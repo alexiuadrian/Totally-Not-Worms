@@ -97,6 +97,15 @@ public class Soldier_Move : MonoBehaviour {
 		bulletStrengh = 200;
 	}
 
+	public void OnTriggerEnter(Collider other)
+	{
+		if(other.gameObject.tag == "Grass")
+		{
+			Debug.Log("dasfdas");
+			Destroy(other.gameObject);
+		}
+	}
+
 }
 
 

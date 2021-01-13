@@ -50,6 +50,16 @@ public class Spy_Move : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerEnter(Collider other)
+	{
+		// Destroy(other.gameObject);
+		// Debug.Log("Intra");
+		if (other.gameObject.tag == "Bullet")
+		{
+			Destroy(gameObject);
+		}
+	}
+
 	public void Activate()
 	{
 		inputEnabled = true;

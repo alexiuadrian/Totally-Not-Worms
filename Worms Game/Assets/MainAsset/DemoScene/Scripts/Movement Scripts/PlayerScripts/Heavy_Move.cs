@@ -45,40 +45,10 @@ public class Heavy_Move : MonoBehaviour {
 			anim.SetBool("touchingGround", grounded);
 
 			Move.Motion(Speed, Jump, rigid, grounded, Scout, sprite);
+
 			if (Input.GetKeyDown(shootKey))
 			{
-				PressedDown = true;
-			}
-			if (!Input.GetKey(shootKey))
-			{
-				PressedDown = false;
-				shotCounter = 0.1f;
-				loadingCounter = 2.5f;
-			}
-			if (PressedDown)
-			{
-				loadingCounter = loadingCounter - Time.deltaTime;
-				if (loadingCounter <= 0)
-				{
-					shotCounter = shotCounter - Time.deltaTime;
-					if (shotCounter <= 0)
-					{
-						gunPoint.transform.eulerAngles = new Vector3(0, 0, UnityEngine.Random.Range(-15, 15));
-						GameObject heavyBullet = Instantiate(bullet, gunPoint.transform.position, gunPoint.transform.rotation) as GameObject;
-						heavyBullet.tag = "Bullet";
-						Destroy(heavyBullet, 0.5f);
-						if (Movement.facingRight)
-						{
-							heavyBullet.GetComponent<Rigidbody2D>().AddForce(heavyBullet.GetComponent<Transform>().right * 200);
-						}
-						if (!Movement.facingRight)
-						{
-							heavyBullet.GetComponent<Rigidbody2D>().AddForce(-heavyBullet.GetComponent<Transform>().right * 200);
-						}
-						shotCounter = 0.05f;
-					}
-
-				}
+				Shooting();
 			}
 		}
 	}
@@ -100,13 +70,30 @@ public class Heavy_Move : MonoBehaviour {
 		Console.Write("Scout futut in cur!");
 	}
 
-	public void GroundDetection(){
-		hit = Physics2D.Raycast (GameObject.Find("Heavy_Feet").transform.position, Vector2.down);
+	public void Shooting()
+	{
+		GameObject heavyBullet = Instantiate(bullet, gunPoint.transform.position, gunPoint.transform.rotation) as GameObject;
+		heavyBullet.tag = "Bullet";
+		Destroy(heavyBullet, 0.8f);
+		if (Movement.facingRight)
+		{
+			heavyBullet.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 200);
+		}
+		if (!Movement.facingRight)
+		{
+			heavyBullet.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 200);
+		}
+	}
 
-		if(hit.distance == 0){
+	public void GroundDetection()
+	{
+		hit = Physics2D.Raycast(GameObject.Find("Heavy_Feet").transform.position, Vector2.down);
+		if (hit.distance < 0.03)
+		{
 			grounded = true;
 		}
-		if(hit.distance != 0){
+		if (hit.distance > 0.03)
+		{
 			grounded = false;
 		}
 	}
