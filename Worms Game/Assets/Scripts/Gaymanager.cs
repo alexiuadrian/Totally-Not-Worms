@@ -11,9 +11,11 @@ public class Gaymanager : MonoBehaviour
     public GameObject Character4 = null;
     public GameObject Character5 = null;
     public GameObject Character6 = null;
-    public int nr = 1;
+    public int nr = 0;
+    public int seconds = 0;
 
     float timer = 0.0f;
+    float prevTime = 0.005f;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +26,10 @@ public class Gaymanager : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        int seconds = (int) (timer % 60);
+        prevTime += Time.deltaTime;
+        seconds = (int) (timer % 60);
 
-        if (Input.GetKeyUp(KeyCode.F))
+        if (Input.GetKeyUp(KeyCode.T))
         {
             nr++;
             if (nr == 7)
@@ -34,18 +37,23 @@ public class Gaymanager : MonoBehaviour
                 nr = 1;
             }
             Turn(false);
+            prevTime = 0.005f;
         }
-        /*
-        else if (seconds >= 5)
+        else if (prevTime % 40 < 0.005)
         {
-            Turn(nr, true);
+            //Turn(nr, true);
+
             //Console.Write("1");
             //Delay(5);
             //Console.Write("2");
             nr++;
-            Turn(nr, false);
+            if (nr == 7)
+            {
+                nr = 1;
+            }
+            Turn(false);
+            prevTime = 0.005f;
         }
-        */
     }
 
     public void Turn(bool penalty)
