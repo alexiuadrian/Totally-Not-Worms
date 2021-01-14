@@ -84,7 +84,7 @@ public class Demoman_Move : MonoBehaviour {
 			bulletStrength = 600;
 		}
 		GameObject DemomanBullet = Instantiate (bullet, gunPoint.transform.position, gunPoint.transform.rotation) as GameObject;
-		DemomanBullet.tag = "Bullet";
+		DemomanBullet.tag = "DemomanBullet";
 		DemomanBullet.GetComponent<Transform> ().eulerAngles = new Vector3 (0,0, UnityEngine.Random.Range(0,360));
 		Destroy(DemomanBullet, 2.0f);
 		if (Movement.facingRight){

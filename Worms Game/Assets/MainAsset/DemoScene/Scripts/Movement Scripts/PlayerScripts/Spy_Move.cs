@@ -19,8 +19,6 @@ public class Spy_Move : MonoBehaviour {
 
 	bool inputEnabled = false;
 
-	public static int health = 30;
-	
 	Ray2D ray;
 	RaycastHit2D hit;
 
@@ -52,16 +50,6 @@ public class Spy_Move : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter(Collider other)
-	{
-		// Destroy(other.gameObject);
-		// Debug.Log("Intra");
-		if (other.gameObject.tag == "Bullet")
-		{
-			Destroy(gameObject);
-		}
-	}
-
 	public void Activate()
 	{
 		inputEnabled = true;
@@ -89,7 +77,7 @@ public class Spy_Move : MonoBehaviour {
 	}
 	public void Shooting(){
 		GameObject spyBullet = Instantiate (bullet, gunPoint.transform.position, gunPoint.transform.rotation) as GameObject;
-		spyBullet.tag = "Bullet";
+		spyBullet.tag = "CaptainBullet";
 		Destroy (spyBullet, 0.8f);
 		if(Movement.facingRight){
 			spyBullet.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * 200);
@@ -98,30 +86,5 @@ public class Spy_Move : MonoBehaviour {
 			spyBullet.GetComponent<Rigidbody2D> ().AddForce (Vector2.left * 200);
 		}
 	}
-	
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.gameObject.tag == "ScoutBullet")
-		{
-			health -= 4;
-		}
-		if (other.gameObject.tag == "SniperBullet")
-		{
-			health -= 6;
-		}	
-		if (other.gameObject.tag == "HeavyBullet")
-		{
-			health -= 7;
-		}
-		if (other.gameObject.tag == "DemomanBullet")
-		{
-			health -= 6;
-		}
-		if (other.gameObject.tag == "SoldierBullet")
-		{
-			health -= 8;
-		}	
-	}
-	
 }
 

@@ -18,7 +18,12 @@ public class HitRegister : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.tag == "Bullet") {
+        if(other.gameObject.tag == "ScoutBullet" 
+           || other.gameObject.tag == "SoldierBullet"
+           || other.gameObject.tag == "DemomanBullet"
+           || other.gameObject.tag == "HeavyBullet"
+           || other.gameObject.tag == "SniperBullet"
+           || other.gameObject.tag == "CaptainBullet") {
             Destroy(gameObject);
         }
     }

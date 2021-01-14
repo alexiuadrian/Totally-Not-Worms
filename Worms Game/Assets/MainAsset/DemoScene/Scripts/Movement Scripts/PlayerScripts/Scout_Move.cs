@@ -14,7 +14,6 @@ public class Scout_Move : MonoBehaviour{
 	public static bool grounded;
 	public bool ground;
 	public static bool Scout = true;
-	public static int health = 30;
 	public Rigidbody2D rigid;
 
 	bool isDead = false;
@@ -89,9 +88,9 @@ public class Scout_Move : MonoBehaviour{
 		GameObject bulletTop = Instantiate (bullet, gunPointOne.transform.position, gunPointOne.transform.rotation) as GameObject;
 		GameObject bulletMid = Instantiate (bullet, gunPointTwo.transform.position, gunPointTwo.transform.rotation) as GameObject;
 		GameObject bulletBottom = Instantiate (bullet, gunPointThree.transform.position, gunPointThree.transform.rotation) as GameObject;
-		bulletTop.tag = "Bullet";
-		bulletMid.tag = "Bullet";
-		bulletBottom.tag = "Bullet";
+		bulletTop.tag = "ScoutBullet";
+		bulletMid.tag = "ScoutBullet";
+		bulletBottom.tag = "ScoutBullet";
 		Destroy (bulletTop, 0.30f);
 		Destroy (bulletMid, 0.30f);
 		Destroy (bulletBottom, 0.30f);
@@ -109,29 +108,4 @@ public class Scout_Move : MonoBehaviour{
 			bulletBottom.GetComponent<Rigidbody2D> ().AddForce (-bulletBottom.GetComponent<Rigidbody2D> ().transform.right * 250);
 		}
 	}
-	
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.gameObject.tag == "DemomanBullet")
-		{
-			health -= 8;
-		}
-		if (other.gameObject.tag == "SniperBullet")
-		{
-			health -= 10;
-		}	
-		if (other.gameObject.tag == "HeavyBullet")
-		{
-			health -= 8;
-		}
-		if (other.gameObject.tag == "CaptainBullet")
-		{
-			health -= 6;
-		}
-		if (other.gameObject.tag == "SoldierBullet")
-		{
-			health -= 11;
-		}	
-	}
-	
 }

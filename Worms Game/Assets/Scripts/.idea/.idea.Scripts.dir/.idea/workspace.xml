@@ -20,16 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bfa5831-172e-4d9b-acf5-a02160b449c4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Demoman_Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Demoman_Move.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Heavy_Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Heavy_Move.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Scout_Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Scout_Move.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Sniper_Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Sniper_Move.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Soldier_Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Soldier_Move.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Spy_Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Spy_Move.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gaymanager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gaymanager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DemomanHitRegister.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DemomanHitRegister.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HitRegister.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HitRegister.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WaterHitRegister.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WaterHitRegister.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewBehaviourScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewBehaviourScript.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +50,9 @@
     <setting file="file://$PROJECT_DIR$/WaterHitRegister.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Destroy_onclick.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/HitRegister.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SniperHitRegister.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SoldierHitRegister.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ScoutHitRegister.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Platform_Generation_v2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Spy_Move.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DemomanHitRegister.cs" root0="SKIP_HIGHLIGHTING" />
@@ -65,17 +69,20 @@
         <option value="$PROJECT_DIR$/Platform_Generation_v2.cs" />
         <option value="$PROJECT_DIR$/Procedural_Generation.cs" />
         <option value="$PROJECT_DIR$/Zoom_Camera.cs" />
-        <option value="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Spy_Move.cs" />
-        <option value="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Soldier_Move.cs" />
-        <option value="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Sniper_Move.cs" />
-        <option value="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Heavy_Move.cs" />
         <option value="$PROJECT_DIR$/Gaymanager.cs" />
         <option value="$PROJECT_DIR$/WaterHitRegister.cs" />
-        <option value="$PROJECT_DIR$/HitRegister.cs" />
         <option value="$PROJECT_DIR$/Game_Manager.cs" />
-        <option value="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Demoman_Move.cs" />
         <option value="$PROJECT_DIR$/DemomanHitRegister.cs" />
+        <option value="$PROJECT_DIR$/HitRegister.cs" />
+        <option value="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Spy_Move.cs" />
+        <option value="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Demoman_Move.cs" />
         <option value="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Scout_Move.cs" />
+        <option value="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Soldier_Move.cs" />
+        <option value="$PROJECT_DIR$/ScoutHitRegister.cs" />
+        <option value="$PROJECT_DIR$/SoldierHitRegister.cs" />
+        <option value="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Sniper_Move.cs" />
+        <option value="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Heavy_Move.cs" />
+        <option value="$PROJECT_DIR$/SniperHitRegister.cs" />
       </list>
     </option>
   </component>
@@ -105,7 +112,7 @@
       <workItem from="1605184974814" duration="5272000" />
       <workItem from="1605198803509" duration="838000" />
       <workItem from="1610620421429" duration="73000" />
-      <workItem from="1610620722537" duration="6954000" />
+      <workItem from="1610620722537" duration="8337000" />
     </task>
     <servers />
   </component>

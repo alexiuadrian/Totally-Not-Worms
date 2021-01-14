@@ -15,7 +15,6 @@ public class Sniper_Move : MonoBehaviour {
 	public bool ground;
 	public static bool Scout = false;
 	public Rigidbody2D rigid;
-	public static int health = 30;
 	Movement Move = new Movement ();
 
 	Ray2D ray;
@@ -79,7 +78,7 @@ public class Sniper_Move : MonoBehaviour {
 	}
 	public void Shoot(){
 		GameObject SniperBullet = Instantiate (bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation) as GameObject;
-		SniperBullet.tag = "Bullet";
+		SniperBullet.tag = "SniperBullet";
 		if(Movement.facingRight){
 			SniperBullet.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * 550);
 		}
@@ -88,29 +87,5 @@ public class Sniper_Move : MonoBehaviour {
 		}
 		Destroy (SniperBullet, 1.5f);
 	}
-	
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.gameObject.tag == "ScoutBullet")
-		{
-			health -= 4;
-		}
-		if (other.gameObject.tag == "DemomanBullet")
-		{
-			health -= 6;
-		}	
-		if (other.gameObject.tag == "HeavyBullet")
-		{
-			health -= 7;
-		}
-		if (other.gameObject.tag == "CaptainBullet")
-		{
-			health -= 6;
-		}
-		if (other.gameObject.tag == "SoldierBullet")
-		{
-			health -= 8;
-		}	
-	}
-	
+
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DemomanHitRegister : MonoBehaviour
+public class SoldierHitRegister : MonoBehaviour
 {
     public int health = 30;
     // Start is called before the first frame update
@@ -16,14 +16,13 @@ public class DemomanHitRegister : MonoBehaviour
     {
         if (health <= 0)
         {
-            Game_Manager.isDead[3] = true;
+            Game_Manager.isDead[2] = true;
             Destroy(gameObject);
         }
     }
     
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.gameObject.tag);
         if (other.gameObject.tag == "ScoutBullet")
         {
             health -= 3;
@@ -40,9 +39,9 @@ public class DemomanHitRegister : MonoBehaviour
         {
             health -= 5;
         }
-        if (other.gameObject.tag == "SoldierBullet")
+        if (other.gameObject.tag == "DemomanBullet")
         {
-            health -= 7;
-        }
+            health -= 6;
+        }	
     }
 }

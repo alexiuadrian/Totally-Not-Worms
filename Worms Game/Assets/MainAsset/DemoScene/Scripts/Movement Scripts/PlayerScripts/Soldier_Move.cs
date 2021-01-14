@@ -13,7 +13,6 @@ public class Soldier_Move : MonoBehaviour {
 	public float Jump = 2.5f;
 	public static bool grounded;
 	public bool ground;
-	public static int health = 30;
 	public static bool Scout = false;
 	public Rigidbody2D rigid;
 	Movement Move = new Movement ();
@@ -87,6 +86,7 @@ public class Soldier_Move : MonoBehaviour {
 			bulletStrengh = 500;
 		}
 		GameObject soldierBullet = Instantiate (bullet, gunPoint.transform.position, gunPoint.transform.rotation) as GameObject;
+		soldierBullet.tag = "SoldierBullet";
 		Destroy (soldierBullet, 1.2f);
 		if(Movement.facingRight){
 			soldierBullet.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * bulletStrengh);
@@ -96,40 +96,6 @@ public class Soldier_Move : MonoBehaviour {
 		}
 		bulletStrengh = 200;
 	}
-
-	public void OnTriggerEnter(Collider other)
-	{
-		if(other.gameObject.tag == "Grass")
-		{
-			Debug.Log("dasfdas");
-			Destroy(other.gameObject);
-		}
-	}
-
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.gameObject.tag == "ScoutBullet")
-		{
-			health -= 3;
-		}
-		if (other.gameObject.tag == "SniperBullet")
-		{
-			health -= 5;
-		}	
-		if (other.gameObject.tag == "HeavyBullet")
-		{
-			health -= 6;
-		}
-		if (other.gameObject.tag == "CaptainBullet")
-		{
-			health -= 5;
-		}
-		if (other.gameObject.tag == "DemomanBullet")
-		{
-			health -= 6;
-		}	
-	}
-	
 }
 
 

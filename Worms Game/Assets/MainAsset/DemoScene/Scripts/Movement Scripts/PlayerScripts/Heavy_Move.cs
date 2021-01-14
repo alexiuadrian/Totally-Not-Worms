@@ -15,7 +15,6 @@ public class Heavy_Move : MonoBehaviour {
 	public bool ground;
 	public static bool Scout = false;
 	public Rigidbody2D rigid;
-	public static int health = 30;
 	Movement Move = new Movement ();
 
 	Ray2D ray;
@@ -74,7 +73,7 @@ public class Heavy_Move : MonoBehaviour {
 	public void Shooting()
 	{
 		GameObject heavyBullet = Instantiate(bullet, gunPoint.transform.position, gunPoint.transform.rotation) as GameObject;
-		heavyBullet.tag = "Bullet";
+		heavyBullet.tag = "HeavyBullet";
 		Destroy(heavyBullet, 0.8f);
 		if (Movement.facingRight)
 		{
@@ -98,31 +97,6 @@ public class Heavy_Move : MonoBehaviour {
 			grounded = false;
 		}
 	}
-	
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.gameObject.tag == "ScoutBullet")
-		{
-			health -= 2;
-		}
-		if (other.gameObject.tag == "SniperBullet")
-		{
-			health -= 4;
-		}	
-		if (other.gameObject.tag == "DemomanBullet")
-		{
-			health -= 5;
-		}
-		if (other.gameObject.tag == "CaptainBullet")
-		{
-			health -= 4;
-		}
-		if (other.gameObject.tag == "SoldierBullet")
-		{
-			health -= 6;
-		}	
-	}
-
 }
 
 
