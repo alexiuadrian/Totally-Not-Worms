@@ -1,21 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HeavyHitRegister : MonoBehaviour
 {
     public int health = 30;
+    public Text healthText;
     // Start is called before the first frame update
     void Start()
     {
-        
+        healthText.text = "Heavy: " + health.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
+        healthText.text = "Heavy: " + health.ToString();
         if (health <= 0)
         {
+            healthText.text = "Heavy: 0";
             Game_Manager.isDead[5] = true;
             Destroy(gameObject);
         }

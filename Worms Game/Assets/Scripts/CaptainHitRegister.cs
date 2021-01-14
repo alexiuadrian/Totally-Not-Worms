@@ -1,21 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CaptainHitRegister : MonoBehaviour
 {
     public int health = 30;
+    public Text healthText;
     // Start is called before the first frame update
     void Start()
     {
-        
+        healthText.text = "Captain: " + health.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
+        healthText.text = "Captain: " + health.ToString();
         if (health <= 0)
         {
+            healthText.text = "Captain: 0";
             Game_Manager.isDead[5] = true;
             Destroy(gameObject);
         }

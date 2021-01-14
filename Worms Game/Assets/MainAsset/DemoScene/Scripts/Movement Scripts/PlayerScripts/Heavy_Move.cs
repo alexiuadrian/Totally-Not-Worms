@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.UI;
 
 public class Heavy_Move : MonoBehaviour {
 	public KeyCode shootKey = KeyCode.T;
@@ -28,7 +29,8 @@ public class Heavy_Move : MonoBehaviour {
 	public float shotCounter;
 	public float loadingCounter;
 
-	void Start () {
+	void Start ()
+	{
 		anim = GetComponent<Animator>();
 	}
 	void FixedUpdate(){

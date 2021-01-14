@@ -1,21 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DemomanHitRegister : MonoBehaviour
 {
     public int health = 30;
+    
+    public Text healthText;
     // Start is called before the first frame update
     void Start()
     {
-        
+        healthText.text = "Demoman: " + health.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
+        healthText.text = "Demoman: " + health.ToString();
         if (health <= 0)
         {
+            healthText.text = "Demoman: 0";
             Game_Manager.isDead[3] = true;
             Destroy(gameObject);
         }
@@ -23,7 +28,6 @@ public class DemomanHitRegister : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.gameObject.tag);
         if (other.gameObject.tag == "ScoutBullet")
         {
             health -= 3;

@@ -1,21 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoutHitRegister : MonoBehaviour
 {
     public int health = 30;
+    
+    public Text healthText;
     // Start is called before the first frame update
     void Start()
     {
-        
+        healthText.text = "Scout: " + health.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
+        healthText.text = "Scout: " + health.ToString();
         if (health <= 0)
         {
+            healthText.text = "Scout: 0";
             Game_Manager.isDead[1] = true;
             Destroy(gameObject);
         }
