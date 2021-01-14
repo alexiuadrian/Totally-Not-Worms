@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bfa5831-172e-4d9b-acf5-a02160b449c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procedural_Generation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Procedural_Generation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +61,6 @@
         <option value="$PROJECT_DIR$/Platform_Generation_v2.cs" />
         <option value="$PROJECT_DIR$/Zoom_Camera.cs" />
         <option value="$PROJECT_DIR$/Gaymanager.cs" />
-        <option value="$PROJECT_DIR$/Game_Manager.cs" />
         <option value="$PROJECT_DIR$/HitRegister.cs" />
         <option value="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Demoman_Move.cs" />
         <option value="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Sniper_Move.cs" />
@@ -79,6 +76,7 @@
         <option value="$PROJECT_DIR$/HeavyHitRegister.cs" />
         <option value="$PROJECT_DIR$/SniperHitRegister.cs" />
         <option value="$PROJECT_DIR$/Procedural_Generation.cs" />
+        <option value="$PROJECT_DIR$/Game_Manager.cs" />
       </list>
     </option>
   </component>
@@ -108,7 +106,7 @@
       <workItem from="1605184974814" duration="5272000" />
       <workItem from="1605198803509" duration="838000" />
       <workItem from="1610620421429" duration="73000" />
-      <workItem from="1610620722537" duration="13691000" />
+      <workItem from="1610620722537" duration="14931000" />
     </task>
     <servers />
   </component>

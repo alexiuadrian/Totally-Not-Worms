@@ -19,8 +19,8 @@ public class CaptainHitRegister : MonoBehaviour
         healthText.text = "Captain: " + health.ToString();
         if (health <= 0)
         {
-            healthText.text = "Captain: 0";
-            Game_Manager.isDead[5] = true;
+            healthText.text = "Captain is dead!";
+            Game_Manager.isDead[6] = true;
             Destroy(gameObject);
         }
     }
@@ -47,5 +47,14 @@ public class CaptainHitRegister : MonoBehaviour
         {
             health -= 8;
         }	
+    }
+
+    public void Dead() 
+    {
+        healthText.text = "Captain is dead!";
+    }
+
+     public void Penalty() {
+        health -= 5;
     }
 }

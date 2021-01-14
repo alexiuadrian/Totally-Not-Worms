@@ -19,7 +19,7 @@ public class SniperHitRegister : MonoBehaviour
         healthText.text = "Sniper: " + health.ToString();
         if (health <= 0)
         {
-            healthText.text = "Sniper: 0";
+            healthText.text = "Sniper is dead!";
             Game_Manager.isDead[4] = true;
             Destroy(gameObject);
         }
@@ -47,5 +47,14 @@ public class SniperHitRegister : MonoBehaviour
         {
             health -= 8;
         }	
+    }
+
+    public void Dead() 
+    {
+        healthText.text = "Sniper is dead!";
+    }
+
+    public void Penalty() {
+        health -= 5;
     }
 }

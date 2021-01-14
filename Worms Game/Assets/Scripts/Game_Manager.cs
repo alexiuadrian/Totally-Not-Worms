@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Game_Manager : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class Game_Manager : MonoBehaviour
     public static List<bool> isDead = new List<bool>();
     public static int nr = 0;
     public int seconds = 0;
+    public Text currentTeam;
 
     float timer = 0.0f;
     public float prevTime = 0.005f;
@@ -23,6 +26,7 @@ public class Game_Manager : MonoBehaviour
         for(int i = 0; i <= 10; i++) {
             isDead.Add(false);
         }
+        currentTeam.text = "Press 'T' to start!";
     }
 
     // Update is called once per frame
@@ -49,6 +53,7 @@ public class Game_Manager : MonoBehaviour
         }
         else if (prevTime % 40 < 0.005)
         {
+            Turn(true);
             nr++;
             if (nr >= 7)
             {
@@ -62,6 +67,24 @@ public class Game_Manager : MonoBehaviour
             prevTime = 0.005f;
         }
         else {
+
+            if(nr % 2 == 1) {
+                currentTeam.text = "Team 1 is playing!";
+            }
+            else if(nr != 0){
+                currentTeam.text = "Team 2 is playing!";
+            }
+
+            if(isDead[1] && isDead[3] && isDead[5]) 
+            {
+                SceneManager.LoadScene("WinTeam2");
+            }
+
+            if(isDead[2] && isDead[4] && isDead[6]) 
+            {
+                SceneManager.LoadScene("WinTeam1");
+            }
+
             if (isDead[nr])
             {
                 ok = true;
@@ -102,7 +125,7 @@ public class Game_Manager : MonoBehaviour
                         nr++;
                     }
                     else {
-                        Character1.gameObject.SendMessage("Activate");
+                        Character1.gameObject.SendMessage(Good);
                     }
                     if(!isDead[2]) {
                         Character2.gameObject.SendMessage(Bad);

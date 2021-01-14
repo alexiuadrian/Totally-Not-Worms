@@ -20,7 +20,7 @@ public class ScoutHitRegister : MonoBehaviour
         healthText.text = "Scout: " + health.ToString();
         if (health <= 0)
         {
-            healthText.text = "Scout: 0";
+            healthText.text = "Scout is dead!";
             Game_Manager.isDead[1] = true;
             Destroy(gameObject);
         }
@@ -48,5 +48,14 @@ public class ScoutHitRegister : MonoBehaviour
         {
             health -= 11;
         }	
+    }
+
+    public void Dead() 
+    {
+        healthText.text = "Scout is dead!";
+    }
+
+    public void Penalty() {
+        health -= 5;
     }
 }

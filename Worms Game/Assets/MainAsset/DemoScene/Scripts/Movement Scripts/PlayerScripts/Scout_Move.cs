@@ -69,11 +69,6 @@ public class Scout_Move : MonoBehaviour{
 		inputEnabled = false;
 	}
 
-	public void Penalty()
-	{
-		Console.Write("Scout futut in cur!");
-	}
-
 	public void GroundDetection(){
 		hit = Physics2D.Raycast (GameObject.Find("Scout_Feet").transform.position, Vector2.down);
 		if(hit.distance < 0.03){
@@ -91,9 +86,9 @@ public class Scout_Move : MonoBehaviour{
 		bulletTop.tag = "ScoutBullet";
 		bulletMid.tag = "ScoutBullet";
 		bulletBottom.tag = "ScoutBullet";
-		Destroy (bulletTop, 0.30f);
-		Destroy (bulletMid, 0.30f);
-		Destroy (bulletBottom, 0.30f);
+		Destroy (bulletTop, 0.60f);
+		Destroy (bulletMid, 0.60f);
+		Destroy (bulletBottom, 0.60f);
 
 		if(Movement.facingRight){
 			rigid.AddForce (-rigid.transform.right * 60);

@@ -19,7 +19,7 @@ public class HeavyHitRegister : MonoBehaviour
         healthText.text = "Heavy: " + health.ToString();
         if (health <= 0)
         {
-            healthText.text = "Heavy: 0";
+            healthText.text = "Heavy is dead!";
             Game_Manager.isDead[5] = true;
             Destroy(gameObject);
         }
@@ -47,5 +47,14 @@ public class HeavyHitRegister : MonoBehaviour
         {
             health -= 6;
         }	
+    }
+
+    public void Dead() 
+    {
+        healthText.text = "Heavy is dead!";
+    }
+
+     public void Penalty() {
+        health -= 5;
     }
 }

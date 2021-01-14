@@ -67,11 +67,6 @@ public class Soldier_Move : MonoBehaviour {
 		inputEnabled = false;
 	}
 
-	public void Penalty()
-	{
-		Console.Write("Scout futut in cur!");
-	}
-
 	public void GroundDetection(){
 		hit = Physics2D.Raycast (GameObject.Find("Soldier_Feet").transform.position, Vector2.down);
 		if(hit.distance < 0.03){
@@ -87,7 +82,7 @@ public class Soldier_Move : MonoBehaviour {
 		}
 		GameObject soldierBullet = Instantiate (bullet, gunPoint.transform.position, gunPoint.transform.rotation) as GameObject;
 		soldierBullet.tag = "SoldierBullet";
-		Destroy (soldierBullet, 1.2f);
+		Destroy (soldierBullet, 1.5f);
 		if(Movement.facingRight){
 			soldierBullet.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * bulletStrengh);
 		}

@@ -65,11 +65,6 @@ public class Demoman_Move : MonoBehaviour {
 		inputEnabled = false;
 	}
 
-	public void Penalty()
-	{
-		Console.Write("Scout futut in cur!");
-	}
-
 	public void GroundDetection(){
 		hit = Physics2D.Raycast (GameObject.Find("Demoman_Feet").transform.position, Vector2.down);
 		if(hit.distance < 0.03){
@@ -86,7 +81,7 @@ public class Demoman_Move : MonoBehaviour {
 		GameObject DemomanBullet = Instantiate (bullet, gunPoint.transform.position, gunPoint.transform.rotation) as GameObject;
 		DemomanBullet.tag = "DemomanBullet";
 		DemomanBullet.GetComponent<Transform> ().eulerAngles = new Vector3 (0,0, UnityEngine.Random.Range(0,360));
-		Destroy(DemomanBullet, 2.0f);
+		Destroy(DemomanBullet, 3.0f);
 		if (Movement.facingRight){
 			DemomanBullet.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * bulletStrength);
 		}

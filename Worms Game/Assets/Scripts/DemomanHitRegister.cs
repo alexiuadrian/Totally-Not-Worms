@@ -20,7 +20,7 @@ public class DemomanHitRegister : MonoBehaviour
         healthText.text = "Demoman: " + health.ToString();
         if (health <= 0)
         {
-            healthText.text = "Demoman: 0";
+            healthText.text = "Demoman is dead!";
             Game_Manager.isDead[3] = true;
             Destroy(gameObject);
         }
@@ -48,5 +48,14 @@ public class DemomanHitRegister : MonoBehaviour
         {
             health -= 7;
         }
+    }
+
+    public void Dead() 
+    {
+        healthText.text = "Demoman is dead!";
+    }
+
+     public void Penalty() {
+        health -= 5;
     }
 }

@@ -60,11 +60,6 @@ public class Spy_Move : MonoBehaviour {
 		inputEnabled = false;
 	}
 
-	public void Penalty()
-	{
-		Console.Write("Spy futut in cur!");
-	}
-
 	public void GroundDetection(){
 		hit = Physics2D.Raycast (GameObject.Find("Spy_Feet").transform.position, Vector2.down);
 
@@ -78,7 +73,7 @@ public class Spy_Move : MonoBehaviour {
 	public void Shooting(){
 		GameObject spyBullet = Instantiate (bullet, gunPoint.transform.position, gunPoint.transform.rotation) as GameObject;
 		spyBullet.tag = "CaptainBullet";
-		Destroy (spyBullet, 0.8f);
+		Destroy (spyBullet, 1.4f);
 		if(Movement.facingRight){
 			spyBullet.GetComponent<Rigidbody2D> ().AddForce (Vector2.right * 200);
 		}

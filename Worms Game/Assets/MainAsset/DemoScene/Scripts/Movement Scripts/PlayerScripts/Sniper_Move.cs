@@ -61,11 +61,6 @@ public class Sniper_Move : MonoBehaviour {
 		inputEnabled = false;
 	}
 
-	public void Penalty()
-	{
-		Console.Write("Scout futut in cur!");
-	}
-
 	public void GroundDetection(){
 		hit = Physics2D.Raycast (GameObject.Find("Sniper_Feet").transform.position, Vector2.down);
 

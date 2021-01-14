@@ -67,16 +67,11 @@ public class Heavy_Move : MonoBehaviour {
 		inputEnabled = false;
 	}
 
-	public void Penalty()
-	{
-		Console.Write("Scout futut in cur!");
-	}
-
 	public void Shooting()
 	{
 		GameObject heavyBullet = Instantiate(bullet, gunPoint.transform.position, gunPoint.transform.rotation) as GameObject;
 		heavyBullet.tag = "HeavyBullet";
-		Destroy(heavyBullet, 0.8f);
+		Destroy(heavyBullet, 1.5f);
 		if (Movement.facingRight)
 		{
 			heavyBullet.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 200);

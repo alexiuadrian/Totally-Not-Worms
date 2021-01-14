@@ -20,7 +20,7 @@ public class SoldierHitRegister : MonoBehaviour
         healthText.text = "Soldier: " + health.ToString();
         if (health <= 0)
         {
-            healthText.text = "Soldier: 0";
+            healthText.text = "Soldier is dead!";
             Game_Manager.isDead[2] = true;
             Destroy(gameObject);
         }
@@ -48,5 +48,14 @@ public class SoldierHitRegister : MonoBehaviour
         {
             health -= 6;
         }	
+    }
+
+    public void Dead() 
+    {
+        healthText.text = "Soldier is dead!";
+    }
+
+     public void Penalty() {
+        health -= 5;
     }
 }
