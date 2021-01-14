@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 155321206}
   - component: {fileID: 155321205}
   - component: {fileID: 155321204}
+  - component: {fileID: 155321211}
   m_Layer: 0
   m_Name: Scout
   m_TagString: Scout
@@ -383,6 +384,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &155321211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155321202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f74008caa279142b7d0f2795a640c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
 --- !u!1 &210061620
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,6 +565,7 @@ GameObject:
   - component: {fileID: 380975190}
   - component: {fileID: 380975189}
   - component: {fileID: 380975192}
+  - component: {fileID: 380975195}
   m_Layer: 0
   m_Name: Captain
   m_TagString: Captain
@@ -727,6 +742,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &380975195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380975187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff6b783d28ba1d4992ba898552eff28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
 --- !u!1 &455185674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,6 +1389,7 @@ GameObject:
   - component: {fileID: 926695516}
   - component: {fileID: 926695515}
   - component: {fileID: 926695514}
+  - component: {fileID: 926695520}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Soldier
@@ -1548,6 +1577,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &926695520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926695512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81591e214af945349b58780bfdfa242b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
 --- !u!1 &1075814468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1704,6 +1746,7 @@ GameObject:
   - component: {fileID: 1239122553}
   - component: {fileID: 1239122552}
   - component: {fileID: 1239122556}
+  - component: {fileID: 1239122558}
   m_Layer: 0
   m_Name: Sniper
   m_TagString: Sniper
@@ -1880,6 +1923,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1239122558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239122550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 077319c714a8f0f46a039557c204f797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
 --- !u!1 &1247668334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2048,6 +2104,7 @@ GameObject:
   - component: {fileID: 1533234104}
   - component: {fileID: 1533234103}
   - component: {fileID: 1533234102}
+  - component: {fileID: 1533234108}
   m_Layer: 0
   m_Name: Heavy
   m_TagString: Heavy
@@ -2237,6 +2294,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1533234108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533234100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c07a0084e8e6746908f87463d6e5c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
 --- !u!1 &1542349978
 GameObject:
   m_ObjectHideFlags: 0
