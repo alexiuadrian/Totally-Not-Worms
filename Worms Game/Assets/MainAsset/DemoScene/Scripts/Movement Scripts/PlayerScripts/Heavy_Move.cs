@@ -15,6 +15,7 @@ public class Heavy_Move : MonoBehaviour {
 	public bool ground;
 	public static bool Scout = false;
 	public Rigidbody2D rigid;
+
 	Movement Move = new Movement ();
 
 	Ray2D ray;
@@ -42,7 +43,7 @@ public class Heavy_Move : MonoBehaviour {
 		if(inputEnabled)
 		{
 			anim.SetFloat("Speed", Mathf.Abs(rigid.velocity.x));
-			anim.SetBool("touchingGround", grounded);
+			// anim.SetBool("touchingGround", grounded);
 
 			Move.Motion(Speed, Jump, rigid, grounded, Scout, sprite);
 

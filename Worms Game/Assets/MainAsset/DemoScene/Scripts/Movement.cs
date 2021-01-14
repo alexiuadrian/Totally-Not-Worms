@@ -10,18 +10,6 @@ public class Movement : MonoBehaviour{
 	public KeyCode rightKey = KeyCode.D;
 	public static float timer = 5.0f;
 	public void Motion (float speed, float jump, Rigidbody2D rdbdy, bool grounded, bool isScout, Transform sprite){
-		/*if(spyBullet.freezePlayer){
-			speed = speed / 2;
-			jump = jump / 2;
-			if(timer > 0){
-				print ("TImer COunting Down");
-				timer = timer - Time.deltaTime;
-			}
-			if(timer < 0){
-				print ("Done");
-				spyBullet.freezePlayerD = false;
-			}
-		}*/
 
 		if (Input.GetKeyDown (jumpKey)) {
 			if(grounded){

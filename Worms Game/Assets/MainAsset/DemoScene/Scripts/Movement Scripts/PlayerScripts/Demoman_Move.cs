@@ -37,7 +37,7 @@ public class Demoman_Move : MonoBehaviour {
 		if(inputEnabled)
 		{
 			anim.SetFloat("Speed", Mathf.Abs(rigid.velocity.x));
-			anim.SetBool("touchingGround", grounded);
+			//anim.SetBool("touchingGround", grounded);
 
 			Move.Motion(Speed, Jump, rigid, grounded, Scout, sprite);
 

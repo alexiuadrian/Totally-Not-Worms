@@ -11,15 +11,19 @@ public class Gaymanager : MonoBehaviour
     public GameObject Character4 = null;
     public GameObject Character5 = null;
     public GameObject Character6 = null;
-    public int nr = 0;
+    public static List<bool> isDead = new List<bool>();
+    public static int nr = 0;
     public int seconds = 0;
 
     float timer = 0.0f;
-    float prevTime = 0.005f;
+    public static float prevTime = 0.005f;
     // Start is called before the first frame update
     void Start()
     {
         Turn(false);
+        for(int i = 0; i <= 6; i++) {
+            isDead.Add(false);
+        }
     }
 
     // Update is called once per frame
@@ -70,62 +74,152 @@ public class Gaymanager : MonoBehaviour
         {
             case 1:
                 {
-                    Character1.gameObject.SendMessage(Good);
-                    Character2.gameObject.SendMessage(Bad);
-                    Character3.gameObject.SendMessage(Bad);
-                    Character4.gameObject.SendMessage(Bad);
-                    Character5.gameObject.SendMessage(Bad);
-                    Character6.gameObject.SendMessage(Bad);
+                    if(isDead[1]) {
+                        nr++;
+                    }
+                    else {
+                        Character1.gameObject.SendMessage(Good);
+                    }
+                    if(!isDead[2]) {
+                        Character2.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[3]) {
+                        Character3.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[4]) {
+                        Character4.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[5]) {
+                        Character5.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[6]) {
+                        Character6.gameObject.SendMessage(Bad);
+                    }
                     break;
                 }
             case 2:
                 {
-                    Character2.gameObject.SendMessage(Good);
-                    Character1.gameObject.SendMessage(Bad);
-                    Character3.gameObject.SendMessage(Bad);
-                    Character4.gameObject.SendMessage(Bad);
-                    Character5.gameObject.SendMessage(Bad);
-                    Character6.gameObject.SendMessage(Bad);
+                    if(isDead[2]) {
+                        nr++;
+                    }
+                    else {
+                        Character2.gameObject.SendMessage(Good);
+                    }
+                    if(!isDead[1]) {
+                        Character1.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[3]) {
+                        Character3.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[4]) {
+                        Character4.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[5]) {
+                        Character5.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[6]) {
+                        Character6.gameObject.SendMessage(Bad);
+                    }
                     break;
                 }
             case 3:
                 {
-                    Character3.gameObject.SendMessage(Good);
-                    Character2.gameObject.SendMessage(Bad);
-                    Character1.gameObject.SendMessage(Bad);
-                    Character4.gameObject.SendMessage(Bad);
-                    Character5.gameObject.SendMessage(Bad);
-                    Character6.gameObject.SendMessage(Bad);
+                    if(isDead[3]) {
+                        nr++;
+                    }
+                    else {
+                        Character3.gameObject.SendMessage(Good);
+                    }
+                    if(!isDead[2]) {
+                        Character2.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[1]) {
+                        Character1.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[4]) {
+                        Character4.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[5]) {
+                        Character5.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[6]) {
+                        Character6.gameObject.SendMessage(Bad);
+                    }
                     break;
                 }
             case 4:
                 {
-                    Character4.gameObject.SendMessage(Good);
-                    Character2.gameObject.SendMessage(Bad);
-                    Character3.gameObject.SendMessage(Bad);
-                    Character1.gameObject.SendMessage(Bad);
-                    Character5.gameObject.SendMessage(Bad);
-                    Character6.gameObject.SendMessage(Bad);
+                    if(isDead[4]) {
+                        nr++;
+                    }
+                    else {
+                        Character4.gameObject.SendMessage(Good);
+                    }
+                    if(!isDead[2]) {
+                        Character2.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[3]) {
+                        Character3.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[1]) {
+                        Character1.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[5]) {
+                        Character5.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[6]) {
+                        Character6.gameObject.SendMessage(Bad);
+                    }
                     break;
                 }
             case 5:
                 {
-                    Character5.gameObject.SendMessage(Good);
-                    Character2.gameObject.SendMessage(Bad);
-                    Character3.gameObject.SendMessage(Bad);
-                    Character4.gameObject.SendMessage(Bad);
-                    Character1.gameObject.SendMessage(Bad);
-                    Character6.gameObject.SendMessage(Bad);
+                    if(isDead[5]) {
+                        nr++;
+                    }
+                    else {
+                        Character5.gameObject.SendMessage(Good);
+                    }
+                    if(!isDead[2]) {
+                        Character2.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[3]) {
+                        Character3.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[4]) {
+                        Character4.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[1]) {
+                        Character1.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[6]) {
+                        Character6.gameObject.SendMessage(Bad);
+                    }
                     break;
                 }
             case 6:
                 {
-                    Character6.gameObject.SendMessage(Good);
-                    Character2.gameObject.SendMessage(Bad);
-                    Character3.gameObject.SendMessage(Bad);
-                    Character4.gameObject.SendMessage(Bad);
-                    Character5.gameObject.SendMessage(Bad);
-                    Character1.gameObject.SendMessage(Bad);
+                    if(isDead[6]) {
+                        nr++;
+                    }
+                    else {
+                        Character6.gameObject.SendMessage(Good);
+                    }
+                    if(!isDead[2]) {
+                        Character2.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[3]) {
+                        Character3.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[4]) {
+                        Character4.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[5]) {
+                        Character5.gameObject.SendMessage(Bad);
+                    }
+                    if(!isDead[1]) {
+                        Character1.gameObject.SendMessage(Bad);
+                    }
                     break;
                 }
             default:

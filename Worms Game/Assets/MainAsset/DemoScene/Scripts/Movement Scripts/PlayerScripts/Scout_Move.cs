@@ -16,6 +16,8 @@ public class Scout_Move : MonoBehaviour{
 	public static bool Scout = true;
 	public Rigidbody2D rigid;
 
+	bool isDead = false;
+
 	public GameObject bullet;
 
 	Movement Move = new Movement ();
@@ -42,13 +44,17 @@ public class Scout_Move : MonoBehaviour{
 		if(inputEnabled)
 		{
 			anim.SetFloat("Speed", Mathf.Abs(rigid.velocity.x));
-			anim.SetBool("touchingGround", grounded);
+			// anim.SetBool("touchingGround", grounded);
 			Move.Motion(Speed, Jump, rigid, grounded, Scout, sprite);
 			if (Input.GetKeyDown(shootKey))
 			{
 				Shoot();
 			}
 		}
+	}
+
+	public void hasDied() {
+		isDead = true;
 	}
 
 	bool inputEnabled = false;
