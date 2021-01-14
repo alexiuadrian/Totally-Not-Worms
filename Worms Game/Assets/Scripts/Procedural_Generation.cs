@@ -16,7 +16,7 @@ public class Procedural_Generation : MonoBehaviour
     {
         for (int x = -40; x < width + 40; ++x)
         {
-            for (int y = -30; y < 3; y++)
+            for (int y = -30; y < 0; y++)
             {
                 spawnObj(water, x, y, 1);
             }
