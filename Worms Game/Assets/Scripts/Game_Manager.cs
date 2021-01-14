@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-public class Gaymanager : MonoBehaviour
+public class Game_Manager : MonoBehaviour
 {
     public GameObject Character1 = null;
     public GameObject Character2 = null;
@@ -16,12 +16,11 @@ public class Gaymanager : MonoBehaviour
     public int seconds = 0;
 
     float timer = 0.0f;
-    public static float prevTime = 0.005f;
+    public float prevTime = 0.005f;
     // Start is called before the first frame update
     void Start()
     {
-        Turn(false);
-        for(int i = 0; i <= 6; i++) {
+        for(int i = 0; i <= 10; i++) {
             isDead.Add(false);
         }
     }
@@ -32,31 +31,56 @@ public class Gaymanager : MonoBehaviour
         timer += Time.deltaTime;
         prevTime += Time.deltaTime;
         seconds = (int) (timer % 60);
+        bool ok = false;
 
         if (Input.GetKeyUp(KeyCode.T))
         {
             nr++;
-            if (nr == 7)
+            if (nr >= 7)
             {
                 nr = 1;
+            }
+            while (isDead[nr])
+            {
+                nr++;
             }
             Turn(false);
             prevTime = 0.005f;
         }
         else if (prevTime % 40 < 0.005)
         {
-            //Turn(nr, true);
-
-            //Console.Write("1");
-            //Delay(5);
-            //Console.Write("2");
             nr++;
-            if (nr == 7)
+            if (nr >= 7)
             {
                 nr = 1;
             }
+            while (isDead[nr])
+            {
+                nr++;
+            }
             Turn(false);
             prevTime = 0.005f;
+        }
+        else {
+            if (isDead[nr])
+            {
+                ok = true;
+            }
+            
+            if(ok)
+            {
+                nr++;
+                if (nr >= 7)
+                {
+                    nr = 1;
+                }
+                while (isDead[nr])
+                {
+                    nr++;
+                }
+                ok = false;
+                Turn(false);
+            }
         }
     }
 
@@ -78,7 +102,7 @@ public class Gaymanager : MonoBehaviour
                         nr++;
                     }
                     else {
-                        Character1.gameObject.SendMessage(Good);
+                        Character1.gameObject.SendMessage("Activate");
                     }
                     if(!isDead[2]) {
                         Character2.gameObject.SendMessage(Bad);

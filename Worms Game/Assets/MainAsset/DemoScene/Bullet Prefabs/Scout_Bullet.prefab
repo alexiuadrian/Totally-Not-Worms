@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 61864512194051254}
   m_Layer: 0
   m_Name: Scout_Bullet
-  m_TagString: Untagged
+  m_TagString: ScoutBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

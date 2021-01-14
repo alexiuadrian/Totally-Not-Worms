@@ -19,6 +19,8 @@ public class Spy_Move : MonoBehaviour {
 
 	bool inputEnabled = false;
 
+	public static int health = 30;
+	
 	Ray2D ray;
 	RaycastHit2D hit;
 
@@ -96,5 +98,30 @@ public class Spy_Move : MonoBehaviour {
 			spyBullet.GetComponent<Rigidbody2D> ().AddForce (Vector2.left * 200);
 		}
 	}
+	
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.tag == "ScoutBullet")
+		{
+			health -= 4;
+		}
+		if (other.gameObject.tag == "SniperBullet")
+		{
+			health -= 6;
+		}	
+		if (other.gameObject.tag == "HeavyBullet")
+		{
+			health -= 7;
+		}
+		if (other.gameObject.tag == "DemomanBullet")
+		{
+			health -= 6;
+		}
+		if (other.gameObject.tag == "SoldierBullet")
+		{
+			health -= 8;
+		}	
+	}
+	
 }
 

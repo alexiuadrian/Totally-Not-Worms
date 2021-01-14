@@ -20,12 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bfa5831-172e-4d9b-acf5-a02160b449c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Prefabs/Dirt.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Dirt.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Prefabs/Grass.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Grass.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Prefabs/Stone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Stone.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Heavy_Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Heavy_Move.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Scout_Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Scout_Move.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Sniper_Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Sniper_Move.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Soldier_Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Soldier_Move.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Spy_Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Spy_Move.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procedural_Generation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Procedural_Generation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gaymanager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gaymanager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HitRegister.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HitRegister.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WaterHitRegister.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WaterHitRegister.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,11 +40,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Destroy_onclick.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Scout_Move.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Move_Camera.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Sniper_Move.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Procedural_Generation.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Platform_Generation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Heavy_Move.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Demoman_Move.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WaterHitRegister.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Destroy_onclick.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/HitRegister.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Platform_Generation_v2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Spy_Move.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DemomanHitRegister.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Soldier_Move.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game_Manager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -52,6 +65,17 @@
         <option value="$PROJECT_DIR$/Platform_Generation_v2.cs" />
         <option value="$PROJECT_DIR$/Procedural_Generation.cs" />
         <option value="$PROJECT_DIR$/Zoom_Camera.cs" />
+        <option value="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Spy_Move.cs" />
+        <option value="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Soldier_Move.cs" />
+        <option value="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Sniper_Move.cs" />
+        <option value="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Heavy_Move.cs" />
+        <option value="$PROJECT_DIR$/Gaymanager.cs" />
+        <option value="$PROJECT_DIR$/WaterHitRegister.cs" />
+        <option value="$PROJECT_DIR$/HitRegister.cs" />
+        <option value="$PROJECT_DIR$/Game_Manager.cs" />
+        <option value="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Demoman_Move.cs" />
+        <option value="$PROJECT_DIR$/DemomanHitRegister.cs" />
+        <option value="$PROJECT_DIR$/../MainAsset/DemoScene/Scripts/Movement Scripts/PlayerScripts/Scout_Move.cs" />
       </list>
     </option>
   </component>
@@ -80,6 +104,8 @@
       <workItem from="1605123746420" duration="6000" />
       <workItem from="1605184974814" duration="5272000" />
       <workItem from="1605198803509" duration="838000" />
+      <workItem from="1610620421429" duration="73000" />
+      <workItem from="1610620722537" duration="6954000" />
     </task>
     <servers />
   </component>
@@ -102,5 +128,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610620765247">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1280.0.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1610620765247" />
+    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1610620454265">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-1280.0.1280.984/0.0.1920.1040@0.0.1920.1040" timestamp="1610620454265" />
   </component>
 </project>

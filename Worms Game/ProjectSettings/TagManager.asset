@@ -8,6 +8,18 @@ TagManager:
   - Feet
   - Bullet
   - Grass
+  - Scout
+  - Soldier
+  - Demoman
+  - Heavy
+  - Sniper
+  - Captain
+  - ScoutBullet
+  - SoldierBullet
+  - DemomanBullet
+  - HeavyBullet
+  - SniperBullet
+  - CaptainBullet
   layers:
   - Default
   - TransparentFX

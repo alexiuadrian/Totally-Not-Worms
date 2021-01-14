@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 155321204}
   m_Layer: 0
   m_Name: Scout
-  m_TagString: AttackingTeam
+  m_TagString: Scout
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -547,13 +547,13 @@ GameObject:
   - component: {fileID: 380975188}
   - component: {fileID: 380975194}
   - component: {fileID: 380975193}
-  - component: {fileID: 380975192}
   - component: {fileID: 380975191}
   - component: {fileID: 380975190}
   - component: {fileID: 380975189}
+  - component: {fileID: 380975192}
   m_Layer: 0
   m_Name: Captain
-  m_TagString: AttackingTeam
+  m_TagString: Captain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -635,8 +635,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &380975192
-BoxCollider2D:
+--- !u!70 &380975192
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -645,22 +645,12 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.010000069, y: -0.015}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.15, y: 0.23}
-    newSize: {x: 0.15, y: 0.23}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.3}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.00000047683716, y: 0.00000047683716}
+  m_Size: {x: 0.09, y: 0.22999999}
+  m_Direction: 0
 --- !u!61 &380975193
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1125,9 +1115,10 @@ GameObject:
   - component: {fileID: 612778531}
   - component: {fileID: 612778530}
   - component: {fileID: 612778529}
+  - component: {fileID: 612778535}
   m_Layer: 0
   m_Name: Demoman
-  m_TagString: AttackingTeam
+  m_TagString: Demoman
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1234,7 +1225,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.05, y: 0.18}
+  m_Size: {x: 0.06, y: 0.19}
   m_EdgeRadius: 0
 --- !u!61 &612778533
 BoxCollider2D:
@@ -1312,6 +1303,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &612778535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612778527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49629a637225b90489ee5cc5db9bd065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
 --- !u!1 &813445704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,7 +1363,7 @@ GameObject:
   - component: {fileID: 926695514}
   m_Layer: 0
   m_Name: Soldier
-  m_TagString: AttackingTeam
+  m_TagString: Soldier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1702,7 +1706,7 @@ GameObject:
   - component: {fileID: 1239122556}
   m_Layer: 0
   m_Name: Sniper
-  m_TagString: AttackingTeam
+  m_TagString: Sniper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2046,7 +2050,7 @@ GameObject:
   - component: {fileID: 1533234102}
   m_Layer: 0
   m_Name: Heavy
-  m_TagString: AttackingTeam
+  m_TagString: Heavy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2335,8 +2339,8 @@ MonoBehaviour:
   Character4: {fileID: 1533234100}
   Character5: {fileID: 1239122550}
   Character6: {fileID: 380975187}
-  nr: 1
   seconds: 0
+  prevTime: 0.005
 --- !u!1 &1874820616
 GameObject:
   m_ObjectHideFlags: 0

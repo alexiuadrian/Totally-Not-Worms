@@ -14,6 +14,7 @@ public class Scout_Move : MonoBehaviour{
 	public static bool grounded;
 	public bool ground;
 	public static bool Scout = true;
+	public static int health = 30;
 	public Rigidbody2D rigid;
 
 	bool isDead = false;
@@ -97,15 +98,40 @@ public class Scout_Move : MonoBehaviour{
 
 		if(Movement.facingRight){
 			rigid.AddForce (-rigid.transform.right * 60);
-			bulletTop.GetComponent<Rigidbody2D> ().AddForce (bulletTop.GetComponent<Rigidbody2D> ().transform.right * 125);
-			bulletMid.GetComponent<Rigidbody2D> ().AddForce (bulletMid.GetComponent<Rigidbody2D> ().transform.right  * 125);
-			bulletBottom.GetComponent<Rigidbody2D> ().AddForce (bulletBottom.GetComponent<Rigidbody2D> ().transform.right * 125);
+			bulletTop.GetComponent<Rigidbody2D> ().AddForce (bulletTop.GetComponent<Rigidbody2D> ().transform.right * 250);
+			bulletMid.GetComponent<Rigidbody2D> ().AddForce (bulletMid.GetComponent<Rigidbody2D> ().transform.right  * 250);
+			bulletBottom.GetComponent<Rigidbody2D> ().AddForce (bulletBottom.GetComponent<Rigidbody2D> ().transform.right * 250);
 		}
 		if(!Movement.facingRight){
 			rigid.AddForce (rigid.transform.right * 60);
-			bulletTop.GetComponent<Rigidbody2D> ().AddForce (-bulletTop.GetComponent<Rigidbody2D> ().transform.right * 125);
-			bulletMid.GetComponent<Rigidbody2D> ().AddForce (-bulletMid.GetComponent<Rigidbody2D> ().transform.right  * 125);
-			bulletBottom.GetComponent<Rigidbody2D> ().AddForce (-bulletBottom.GetComponent<Rigidbody2D> ().transform.right * 125);
+			bulletTop.GetComponent<Rigidbody2D> ().AddForce (-bulletTop.GetComponent<Rigidbody2D> ().transform.right * 250);
+			bulletMid.GetComponent<Rigidbody2D> ().AddForce (-bulletMid.GetComponent<Rigidbody2D> ().transform.right  * 250);
+			bulletBottom.GetComponent<Rigidbody2D> ().AddForce (-bulletBottom.GetComponent<Rigidbody2D> ().transform.right * 250);
 		}
 	}
+	
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.tag == "DemomanBullet")
+		{
+			health -= 8;
+		}
+		if (other.gameObject.tag == "SniperBullet")
+		{
+			health -= 10;
+		}	
+		if (other.gameObject.tag == "HeavyBullet")
+		{
+			health -= 8;
+		}
+		if (other.gameObject.tag == "CaptainBullet")
+		{
+			health -= 6;
+		}
+		if (other.gameObject.tag == "SoldierBullet")
+		{
+			health -= 11;
+		}	
+	}
+	
 }
