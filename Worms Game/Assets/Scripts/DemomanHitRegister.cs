@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DemomanHitRegister : MonoBehaviour
 {
-    public int health = 30;
+    public static int health = 30;
     
     public Text healthText;
     // Start is called before the first frame update
@@ -48,5 +48,10 @@ public class DemomanHitRegister : MonoBehaviour
         {
             health -= 7;
         }
+    }
+
+    public static int GetHealth()
+    {
+        return health;
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CaptainHitRegister : MonoBehaviour
 {
-    public int health = 30;
+    public static int health = 30;
     public Text healthText;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,7 @@ public class CaptainHitRegister : MonoBehaviour
             Game_Manager.isDead[5] = true;
             Destroy(gameObject);
         }
+
     }
     
     void OnTriggerEnter2D(Collider2D other)
@@ -46,6 +47,11 @@ public class CaptainHitRegister : MonoBehaviour
         if (other.gameObject.tag == "SoldierBullet")
         {
             health -= 8;
-        }	
+        }
+    }
+
+    public static int GetHealth()
+    {
+        return health;
     }
 }

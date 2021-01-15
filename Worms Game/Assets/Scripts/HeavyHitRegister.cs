@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HeavyHitRegister : MonoBehaviour
 {
-    public int health = 30;
+    public static int health = 30;
     public Text healthText;
     // Start is called before the first frame update
     void Start()
@@ -46,6 +46,11 @@ public class HeavyHitRegister : MonoBehaviour
         if (other.gameObject.tag == "SoldierBullet")
         {
             health -= 6;
-        }	
+        }
+    }
+
+    public static int GetHealth()
+    {
+        return health;
     }
 }

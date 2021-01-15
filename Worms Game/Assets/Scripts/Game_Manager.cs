@@ -258,4 +258,9 @@ public class Game_Manager : MonoBehaviour
     {
         System.Threading.Thread.Sleep(seconds * 1000);
     }
+
+    public static int GetTurn()
+    {
+        return nr;
+    }
 }

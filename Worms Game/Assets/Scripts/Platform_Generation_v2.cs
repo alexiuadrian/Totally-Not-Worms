@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+
 public class Platform_Generation_v2 : MonoBehaviour
 {
     [SerializeField] public int width, height;
@@ -8,6 +9,7 @@ public class Platform_Generation_v2 : MonoBehaviour
     [SerializeField] public GameObject dirt, grass, stone;
 
     [SerializeField] public int minHeight;
+
     
     void Start()
     {
@@ -59,7 +61,7 @@ public class Platform_Generation_v2 : MonoBehaviour
         }
     }
     
-    void spawnObj(GameObject obj,int width,int height)    // Whatever we spawn will be a child of our procedural generation gameObj
+    public void spawnObj(GameObject obj, int width, int height)    // Whatever we spawn will be a child of our procedural generation gameObj
     {
         obj = Instantiate(obj, new Vector2(width, height + minHeight), Quaternion.identity);
         obj.transform.parent = this.transform;

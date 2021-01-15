@@ -19,6 +19,9 @@ TagManager:
   - HeavyBullet
   - SniperBullet
   - CaptainBullet
+  - Dirt
+  - Stone
+  - Water
   layers:
   - Default
   - TransparentFX

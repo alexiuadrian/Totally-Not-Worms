@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SniperHitRegister : MonoBehaviour
 {
-    public int health = 30;
+    public static int health = 30;
     public Text healthText;
     // Start is called before the first frame update
     void Start()
@@ -47,5 +47,10 @@ public class SniperHitRegister : MonoBehaviour
         {
             health -= 8;
         }	
+    }
+
+    public static int GetHealth()
+    {
+        return health;
     }
 }

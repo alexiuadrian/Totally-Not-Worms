@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoutHitRegister : MonoBehaviour
 {
-    public int health = 30;
+    public static int health = 30;
     
     public Text healthText;
     // Start is called before the first frame update
@@ -47,6 +47,11 @@ public class ScoutHitRegister : MonoBehaviour
         if (other.gameObject.tag == "SoldierBullet")
         {
             health -= 11;
-        }	
+        }
+    }
+
+    public static int GetHealth()
+    {
+        return health;
     }
 }
