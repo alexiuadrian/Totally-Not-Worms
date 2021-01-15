@@ -4361,6 +4361,7 @@ MonoBehaviour:
   Character6: {fileID: 380975187}
   seconds: 0
   currentTeam: {fileID: 767912074}
+  timeLeft: {fileID: 1111832635}
   prevTime: 0.005
 --- !u!1 &1804043515
 GameObject:
