@@ -17,6 +17,7 @@ public class Game_Manager : MonoBehaviour
     public static int nr = 0;
     public int seconds = 0;
     public Text currentTeam;
+    public Text timeLeft;
 
     float timer = 0.0f;
     public float prevTime = 0.005f;
@@ -36,7 +37,7 @@ public class Game_Manager : MonoBehaviour
         prevTime += Time.deltaTime;
         seconds = (int) (timer % 60);
         bool ok = false;
-
+        timeLeft.text = "Time left: " + (40 - ((int) prevTime % 60)).ToString();
         if (Input.GetKeyUp(KeyCode.T))
         {
             nr++;
