@@ -20,7 +20,7 @@ public class HeavyHitRegister : MonoBehaviour
         if (health <= 0)
         {
             healthText.text = "Heavy is dead!";
-            Game_Manager.isDead[5] = true;
+            Game_Manager.isDead[4] = true;
             Destroy(gameObject);
         }
     }
@@ -30,22 +30,27 @@ public class HeavyHitRegister : MonoBehaviour
         if (other.gameObject.tag == "ScoutBullet")
         {
             health -= 2;
+            ScoreManager.instance.TakeDamage(4, 2);
         }
         if (other.gameObject.tag == "SniperBullet")
         {
             health -= 4;
+            ScoreManager.instance.TakeDamage(4, 4);
         }	
         if (other.gameObject.tag == "DemomanBullet")
         {
             health -= 5;
+            ScoreManager.instance.TakeDamage(4, 5);
         }
         if (other.gameObject.tag == "CaptainBullet")
         {
             health -= 4;
+            ScoreManager.instance.TakeDamage(4, 4);
         }
         if (other.gameObject.tag == "SoldierBullet")
         {
             health -= 6;
+            ScoreManager.instance.TakeDamage(4, 6);
         }	
     }
 
@@ -56,5 +61,6 @@ public class HeavyHitRegister : MonoBehaviour
 
      public void Penalty() {
         health -= 5;
+        ScoreManager.instance.TakeDamage(4, 5);
     }
 }

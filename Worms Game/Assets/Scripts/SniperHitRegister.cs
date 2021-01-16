@@ -20,7 +20,7 @@ public class SniperHitRegister : MonoBehaviour
         if (health <= 0)
         {
             healthText.text = "Sniper is dead!";
-            Game_Manager.isDead[4] = true;
+            Game_Manager.isDead[5] = true;
             Destroy(gameObject);
         }
     }
@@ -30,22 +30,27 @@ public class SniperHitRegister : MonoBehaviour
         if (other.gameObject.tag == "ScoutBullet")
         {
             health -= 4;
+            ScoreManager.instance.TakeDamage(1, 4);
         }
         if (other.gameObject.tag == "DemomanBullet")
         {
             health -= 6;
+            ScoreManager.instance.TakeDamage(1, 6);
         }	
         if (other.gameObject.tag == "HeavyBullet")
         {
             health -= 7;
+            ScoreManager.instance.TakeDamage(1, 7);
         }
         if (other.gameObject.tag == "CaptainBullet")
         {
             health -= 6;
+            ScoreManager.instance.TakeDamage(1, 6);
         }
         if (other.gameObject.tag == "SoldierBullet")
         {
             health -= 8;
+            ScoreManager.instance.TakeDamage(1, 8);
         }	
     }
 
@@ -56,5 +61,6 @@ public class SniperHitRegister : MonoBehaviour
 
     public void Penalty() {
         health -= 5;
+        ScoreManager.instance.TakeDamage(1, 5);
     }
 }

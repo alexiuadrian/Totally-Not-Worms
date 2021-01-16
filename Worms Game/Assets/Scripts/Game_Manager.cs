@@ -15,16 +15,20 @@ public class Game_Manager : MonoBehaviour
     public GameObject Character6 = null;
     public static List<bool> isDead = new List<bool>();
     public static int nr = 0;
+    public int lastNr = 0;
+    public int secondLastNr = 0;
     public int seconds = 0;
     public Text currentTeam;
     public Text timeLeft;
+    bool okGlobal = false;
 
     float timer = 0.0f;
     public float prevTime = 0.005f;
+    public float delayTime = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i <= 10; i++) {
+        for(int i = 0; i <= 8; i++) {
             isDead.Add(false);
         }
         currentTeam.text = "Press 'T' to start!";
@@ -35,22 +39,27 @@ public class Game_Manager : MonoBehaviour
     {
         timer += Time.deltaTime;
         prevTime += Time.deltaTime;
+        delayTime += Time.deltaTime;
         seconds = (int) (timer % 60);
         bool ok = false;
         timeLeft.text = "Time left: " + (40 - ((int) prevTime % 60)).ToString();
         if (Input.GetKeyUp(KeyCode.T))
         {
-            nr++;
-            if (nr >= 7)
-            {
-                nr = 1;
-            }
-            while (isDead[nr])
-            {
                 nr++;
-            }
-            Turn(false);
-            prevTime = 0.005f;
+                if (nr >= 7)
+                {
+                    nr = 1;
+                }
+                while (isDead[nr])
+                {
+                    nr++;
+                    if (nr >= 7)
+                    {
+                        nr = 1;
+                    }
+                }
+                Turn(false);
+                prevTime = 0.005f;
         }
         else if (prevTime % 40 < 0.005)
         {
@@ -63,6 +72,10 @@ public class Game_Manager : MonoBehaviour
             while (isDead[nr])
             {
                 nr++;
+                if (nr >= 7)
+                {
+                    nr = 1;
+                }
             }
             Turn(false);
             prevTime = 0.005f;
@@ -78,12 +91,22 @@ public class Game_Manager : MonoBehaviour
 
             if(isDead[1] && isDead[3] && isDead[5]) 
             {
-                SceneManager.LoadScene("WinTeam2");
+                if(okGlobal == true) 
+                {
+                    SceneManager.LoadScene("WinTeam2");
+                }
+                ScoreManager.instance.UpdateHighScore();
+                okGlobal = true;
             }
 
             if(isDead[2] && isDead[4] && isDead[6]) 
             {
-                SceneManager.LoadScene("WinTeam1");
+                if(okGlobal == true) 
+                {
+                    SceneManager.LoadScene("WinTeam1");
+                }
+                ScoreManager.instance.UpdateHighScore();
+                okGlobal = true;
             }
 
             if (isDead[nr])
@@ -101,6 +124,10 @@ public class Game_Manager : MonoBehaviour
                 while (isDead[nr])
                 {
                     nr++;
+                    if (nr >= 7)
+                    {
+                        nr = 1;
+                    }
                 }
                 ok = false;
                 Turn(false);
@@ -278,8 +305,6 @@ public class Game_Manager : MonoBehaviour
         }
     }
 
-    public void Delay(int seconds)
-    {
-        System.Threading.Thread.Sleep(seconds * 1000);
-    }
+
+private const int nimic = 0;
 }

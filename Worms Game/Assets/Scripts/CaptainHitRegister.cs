@@ -30,22 +30,27 @@ public class CaptainHitRegister : MonoBehaviour
         if (other.gameObject.tag == "ScoutBullet")
         {
             health -= 4;
+            ScoreManager.instance.TakeDamage(5, 4);
         }
         if (other.gameObject.tag == "SniperBullet")
         {
             health -= 6;
+            ScoreManager.instance.TakeDamage(5, 6);
         }	
         if (other.gameObject.tag == "HeavyBullet")
         {
             health -= 7;
+            ScoreManager.instance.TakeDamage(5, 7);
         }
         if (other.gameObject.tag == "DemomanBullet")
         {
             health -= 6;
+            ScoreManager.instance.TakeDamage(5, 6);
         }
         if (other.gameObject.tag == "SoldierBullet")
         {
             health -= 8;
+            ScoreManager.instance.TakeDamage(5, 8);
         }	
     }
 
@@ -56,5 +61,6 @@ public class CaptainHitRegister : MonoBehaviour
 
      public void Penalty() {
         health -= 5;
+        ScoreManager.instance.TakeDamage(5, 5);
     }
 }

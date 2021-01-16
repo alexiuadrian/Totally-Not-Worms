@@ -28,25 +28,30 @@ public class ScoutHitRegister : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "DemomanBullet")
+       if (other.gameObject.tag == "DemomanBullet")
         {
             health -= 8;
+            ScoreManager.instance.TakeDamage(0, 8);
         }
         if (other.gameObject.tag == "SniperBullet")
         {
             health -= 10;
+            ScoreManager.instance.TakeDamage(0, 10);
         }	
         if (other.gameObject.tag == "HeavyBullet")
         {
             health -= 8;
+            ScoreManager.instance.TakeDamage(0, 8);
         }
         if (other.gameObject.tag == "CaptainBullet")
         {
             health -= 6;
+            ScoreManager.instance.TakeDamage(0, 6);
         }
         if (other.gameObject.tag == "SoldierBullet")
         {
             health -= 11;
+            ScoreManager.instance.TakeDamage(0, 11);
         }	
     }
 
@@ -57,5 +62,6 @@ public class ScoutHitRegister : MonoBehaviour
 
     public void Penalty() {
         health -= 5;
+        ScoreManager.instance.TakeDamage(0, 5);
     }
 }

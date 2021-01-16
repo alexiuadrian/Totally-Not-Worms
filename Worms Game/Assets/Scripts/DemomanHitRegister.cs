@@ -31,22 +31,27 @@ public class DemomanHitRegister : MonoBehaviour
         if (other.gameObject.tag == "ScoutBullet")
         {
             health -= 3;
+            ScoreManager.instance.TakeDamage(2, 3);
         }
         if (other.gameObject.tag == "SniperBullet")
         {
             health -= 5;
+            ScoreManager.instance.TakeDamage(2, 5);
         }	
         if (other.gameObject.tag == "HeavyBullet")
         {
             health -= 6;
+            ScoreManager.instance.TakeDamage(2, 6);
         }
         if (other.gameObject.tag == "CaptainBullet")
         {
             health -= 5;
+            ScoreManager.instance.TakeDamage(2, 5);
         }
         if (other.gameObject.tag == "SoldierBullet")
         {
             health -= 7;
+            ScoreManager.instance.TakeDamage(2, 7);
         }
     }
 
@@ -57,5 +62,6 @@ public class DemomanHitRegister : MonoBehaviour
 
      public void Penalty() {
         health -= 5;
+        ScoreManager.instance.TakeDamage(2, 5);
     }
 }
