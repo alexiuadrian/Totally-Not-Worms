@@ -32,26 +32,31 @@ public class ScoutHitRegister : MonoBehaviour
         {
             health -= 8;
             ScoreManager.instance.TakeDamage(0, 8);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "SniperBullet")
         {
             health -= 10;
             ScoreManager.instance.TakeDamage(0, 10);
+            Destroy(other.gameObject);
         }	
         if (other.gameObject.tag == "HeavyBullet")
         {
             health -= 8;
             ScoreManager.instance.TakeDamage(0, 8);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "CaptainBullet")
         {
             health -= 6;
             ScoreManager.instance.TakeDamage(0, 6);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "SoldierBullet")
         {
             health -= 11;
             ScoreManager.instance.TakeDamage(0, 11);
+            Destroy(other.gameObject);
         }	
     }
 

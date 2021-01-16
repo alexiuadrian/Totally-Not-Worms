@@ -32,26 +32,31 @@ public class SoldierHitRegister : MonoBehaviour
         {
             health -= 3;
             ScoreManager.instance.TakeDamage(3, 3);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "SniperBullet")
         {
             health -= 5;
             ScoreManager.instance.TakeDamage(3, 5);
+            Destroy(other.gameObject);
         }	
         if (other.gameObject.tag == "HeavyBullet")
         {
             health -= 6;
             ScoreManager.instance.TakeDamage(3, 6);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "CaptainBullet")
         {
             health -= 5;
             ScoreManager.instance.TakeDamage(3, 5);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "DemomanBullet")
         {
             health -= 6;
             ScoreManager.instance.TakeDamage(3, 6);
+            Destroy(other.gameObject);
         }	
     }
 

@@ -154,7 +154,7 @@ RectTransform:
   - {fileID: 1332880437}
   - {fileID: 749656738}
   m_Father: {fileID: 968693895}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -253,7 +253,7 @@ RectTransform:
   m_Children:
   - {fileID: 1486814275}
   m_Father: {fileID: 218979471}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -393,13 +393,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 870975994}
   - {fileID: 2094070165}
   - {fileID: 1332060627}
   - {fileID: 325179331}
   - {fileID: 166564571}
   - {fileID: 751955282}
   m_Father: {fileID: 968693895}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -510,7 +511,7 @@ RectTransform:
   m_Children:
   - {fileID: 509881232}
   m_Father: {fileID: 218979471}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1224,7 +1225,7 @@ RectTransform:
   m_Children:
   - {fileID: 1663440955}
   m_Father: {fileID: 218979471}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1362,12 +1363,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 968693895}
-  m_RootOrder: 1
+  m_Father: {fileID: 218979471}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -218, y: -243}
+  m_AnchoredPosition: {x: -224, y: 101.44003}
   m_SizeDelta: {x: 428.63293, y: -408.58545}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &870975995
@@ -1558,7 +1559,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 462511178}
-  - {fileID: 870975994}
   - {fileID: 218979471}
   - {fileID: 2103559299}
   - {fileID: 107688594}
@@ -1794,7 +1794,7 @@ RectTransform:
   m_Children:
   - {fileID: 1929599156}
   m_Father: {fileID: 218979471}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2517,18 +2517,21 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Meciul va incepe cu primul jucator controlandu-si unul dintre cele 3 caractere,
     avand ca obiectiv sa omoare caracterele inamicului. Acesta are timp 40 de secunde
-    sa se miste pe harta si sa intre in modul de atac pentru distruge un inamic.
-    Odata ce jucatorul isi termina tura cu primul caracter, urmeaza ca cel de-al
-    doilea jucator sa-si completeze tura cu primul sau caracter. Fiecare echipa are
-    90 de puncte de viata, astfel fiecare caracter are cate 30.
+    sa se miste pe harta si sa traga intr-un inamic. Daca acesta nu reuseste, iar
+    timpul expira, va incasa 5 puncte daune. Odata ce jucatorul isi termina tura
+    cu primul caracter, urmeaza ca cel de-al doilea jucator sa-si completeze tura
+    cu primul sau caracter. Fiecare echipa are 90 de puncte de viata, astfel fiecare
+    caracter are cate 30.
 
 
-    A, D - stanga,
-    dreapta
+    A, D - stanga, dreapta
 
     W - saritura
 
-    T - trage
+    T -
+    trage
+
+    Esc - intoarce-te la Meniu
 
 '
   m_isRightToLeft: 0
@@ -3475,7 +3478,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 218979471}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3556,7 +3559,7 @@ RectTransform:
   - {fileID: 1222019779}
   - {fileID: 2067651737}
   m_Father: {fileID: 968693895}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

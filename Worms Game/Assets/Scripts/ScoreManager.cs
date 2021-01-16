@@ -12,7 +12,6 @@ public class ScoreManager : MonoBehaviour
     public int highScore;
     public Text highScoreText;
 
-
     public void Awake()
     {
         instance = this;
@@ -78,6 +77,7 @@ public class ScoreManager : MonoBehaviour
             biggerscore = team2score;
         }
 
+        SaveScore(biggerscore);
 
         if (biggerscore > highScore)
         {
@@ -98,5 +98,10 @@ public class ScoreManager : MonoBehaviour
         PlayerPrefs.DeleteKey("HighScore");
         highScore = 0;
         highScoreText.text = "Highscore: " + highScore.ToString();
+    }
+
+    public void SaveScore(int s)
+    {
+        PlayerPrefs.SetInt("Score", s);
     }
 }

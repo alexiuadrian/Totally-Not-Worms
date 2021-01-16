@@ -14,7 +14,6 @@ public class WinToMainMenu : MonoBehaviour
 	}
 
 	void TaskOnClick(){
-		Debug.Log ("You have clicked the button!");
         SceneManager.LoadScene("Main Menu");
 	}
 }

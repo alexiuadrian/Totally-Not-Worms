@@ -31,26 +31,31 @@ public class SniperHitRegister : MonoBehaviour
         {
             health -= 4;
             ScoreManager.instance.TakeDamage(1, 4);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "DemomanBullet")
         {
             health -= 6;
             ScoreManager.instance.TakeDamage(1, 6);
+            Destroy(other.gameObject);
         }	
         if (other.gameObject.tag == "HeavyBullet")
         {
             health -= 7;
             ScoreManager.instance.TakeDamage(1, 7);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "CaptainBullet")
         {
             health -= 6;
             ScoreManager.instance.TakeDamage(1, 6);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "SoldierBullet")
         {
             health -= 8;
             ScoreManager.instance.TakeDamage(1, 8);
+            Destroy(other.gameObject);
         }	
     }
 

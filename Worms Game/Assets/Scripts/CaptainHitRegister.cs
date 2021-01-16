@@ -31,26 +31,31 @@ public class CaptainHitRegister : MonoBehaviour
         {
             health -= 4;
             ScoreManager.instance.TakeDamage(5, 4);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "SniperBullet")
         {
             health -= 6;
             ScoreManager.instance.TakeDamage(5, 6);
+            Destroy(other.gameObject);
         }	
         if (other.gameObject.tag == "HeavyBullet")
         {
             health -= 7;
             ScoreManager.instance.TakeDamage(5, 7);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "DemomanBullet")
         {
             health -= 6;
             ScoreManager.instance.TakeDamage(5, 6);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "SoldierBullet")
         {
             health -= 8;
             ScoreManager.instance.TakeDamage(5, 8);
+            Destroy(other.gameObject);
         }	
     }
 

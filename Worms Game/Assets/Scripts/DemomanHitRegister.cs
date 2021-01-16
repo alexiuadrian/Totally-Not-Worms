@@ -32,26 +32,31 @@ public class DemomanHitRegister : MonoBehaviour
         {
             health -= 3;
             ScoreManager.instance.TakeDamage(2, 3);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "SniperBullet")
         {
             health -= 5;
             ScoreManager.instance.TakeDamage(2, 5);
+            Destroy(other.gameObject);
         }	
         if (other.gameObject.tag == "HeavyBullet")
         {
             health -= 6;
             ScoreManager.instance.TakeDamage(2, 6);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "CaptainBullet")
         {
             health -= 5;
             ScoreManager.instance.TakeDamage(2, 5);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "SoldierBullet")
         {
             health -= 7;
             ScoreManager.instance.TakeDamage(2, 7);
+            Destroy(other.gameObject);
         }
     }
 

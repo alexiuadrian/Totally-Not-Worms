@@ -31,26 +31,31 @@ public class HeavyHitRegister : MonoBehaviour
         {
             health -= 2;
             ScoreManager.instance.TakeDamage(4, 2);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "SniperBullet")
         {
             health -= 4;
             ScoreManager.instance.TakeDamage(4, 4);
+            Destroy(other.gameObject);
         }	
         if (other.gameObject.tag == "DemomanBullet")
         {
             health -= 5;
             ScoreManager.instance.TakeDamage(4, 5);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "CaptainBullet")
         {
             health -= 4;
             ScoreManager.instance.TakeDamage(4, 4);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "SoldierBullet")
         {
             health -= 6;
             ScoreManager.instance.TakeDamage(4, 6);
+            Destroy(other.gameObject);
         }	
     }
 
